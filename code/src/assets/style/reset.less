@@ -1,0 +1,100 @@
+
+html {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	
+	font-family: Microsoft YaHei, Arial, sans-serif, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB;
+	font-size: 16px;
+	// background: #f8fbff;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	outline: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+	cursor: pointer;
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+}
+
+div:focus{
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+ul,
+li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+input:focus,
+textarea:focus,
+button:focus{
+	outline: 0;
+}
+textarea{
+	resize: none;
+}
+
+img{
+	vertical-align: middle;
+	max-width: 100%;
+	border: none;
+}
+// 滚动条样式修改
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track-piece {
+	background-color: rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb:vertical {
+	height: 8px;
+	background-color: rgba(125, 125, 125, 0.7);
+	-webkit-border-radius:8px;
+  }
+  
+  ::-webkit-scrollbar-thumb:horizontal {
+	width: 8px;
+	background-color: rgba(125, 125, 125, 0.7);
+	-webkit-border-radius: 8px;
+  }
