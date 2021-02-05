@@ -5,7 +5,6 @@
   "scripts": {
     "serve:demo1": "vue-cli-service serve --progress demo1",
     "build:demo1": "vue-cli-service build --progress demo1",
-    
     "build:test": "vue-cli-service build --progress xhqyzx",
     "debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js serve --progress demo1 --mode asys",
     "asys": "vue-cli-service build --progress demo1 --report"
