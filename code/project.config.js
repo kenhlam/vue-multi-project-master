@@ -10,7 +10,7 @@ module.exports = {
         },
         proxy: {
             "/api": {
-                target: "",  //请求代理地址
+                target: "",  //qdkfcs 1
                 changeOrigin: true, // 是否改变域名
                 ws: true,
                 pathRewrite: {
@@ -19,14 +19,22 @@ module.exports = {
             },
             // 上传特殊处理
             "/attachment": {
-                target: "",  //请求代理地址
+                target: "",  //qdkfcs 1
                 changeOrigin: true, // 是否改变域名
                 ws: true,
 
             },
-          
+            "/data": {
+                target: "",
+                changeOrigin: true, // 是否改变域名
+                ws: true
+
+            }
 
 
         }
     }
+
 }
+
+

@@ -1,13 +1,14 @@
 {
-  "name": "scuniver",
+  "name": "ky_2021_by_lam",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-
     "serve:demo1": "vue-cli-service serve --progress demo1",
     "build:demo1": "vue-cli-service build --progress demo1",
-    "build:test": "vue-cli-service build --progress wxzk",
-    "debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js serve --progress demo1"
+    
+    "build:test": "vue-cli-service build --progress xhqyzx",
+    "debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js serve --progress demo1 --mode asys",
+    "asys": "vue-cli-service build --progress demo1 --report"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -15,13 +16,17 @@
     "core-js": "^3.6.4",
     "element-ui": "^2.13.0",
     "jquery": "^3.5.1",
+    "v-lam-plugin": "^0.1.0",
     "vue": "^2.6.11",
+    "vue-baidu-map": "^0.21.22",
+    "vue-qr": "^2.3.0",
     "vue-router": "^3.1.5",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-pwa": "^4.0.0",
     "@vue/cli-plugin-router": "~4.2.0",
     "@vue/cli-plugin-vuex": "~4.2.0",
     "@vue/cli-service": "~4.2.0",

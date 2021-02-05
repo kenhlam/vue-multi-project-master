@@ -1,35 +1,30 @@
 
-import {
-    _newsList
-} from "@api/service";
 
 export default {
-
+    name: "",
     data() {
         return {
-
-
 
         };
     },
     components: {
-
+     
+      },
+    computed: {
+       
+       
     },
     beforeCreated() { },
     created() { },
-    computed: {
+    mounted() {
 
     },
-    mounted() {
-        // this.$refs.newsData.getData()
+    watch: {
 
     },
     methods: {
 
 
-
-    },
-    beforeDestroy() {
 
     }
 };

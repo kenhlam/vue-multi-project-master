@@ -9,7 +9,7 @@ import router from "./router";
 
 import Vant from 'vant';
 import 'vant/lib/index.css';
-
+debugger
 Vue.use(Vant);
 
 import upperFirst from 'lodash/upperFirst'
@@ -56,7 +56,7 @@ FastClick.attach(document.body);
 // 公共方法
 import tools from "@utils/common";
 Vue.use(tools);
-
+debugger
 new Vue({
     router,
     render: h => h(App)

@@ -2,10 +2,11 @@ const path = require("path");
 const project = require("./project.config.js");
 const projectname = process.argv[4];
 const currentPage = project[projectname];
-
+console.log(projectname);
 let page = {};
 page[projectname] = currentPage.page;
-
+console.log(projectname)
+console.log(currentPage.page)
 module.exports = {
     publicPath: process.env.NODE_ENV === "production" ? currentPage.rootPath : "/",
     outputDir: "dist",
@@ -21,7 +22,6 @@ module.exports = {
                 "@components": path.join(__dirname, "./src/components"),
                 "@project":path.join(__dirname, "./src/project"),
                 "@img": path.join(__dirname, "./src/assets/imgs"),
-
                 "@style": path.join(__dirname, "./src/assets/style"),
 
             }
@@ -35,7 +35,7 @@ module.exports = {
         // .use('image-webpack-loader')
         // .loader('image-webpack-loader')
         // .options({ bypassOnDebug: true })
-        // if (process.env.use_analyzer || process.env.NODE_ENV === "production") {
+        // if (process.env.NODE_ENV === "analyzer") {
         //     config.plugin("webpack-bundle-analyzer").use(BundleAnalyzerPlugin);
         // }
     },
@@ -63,12 +63,14 @@ module.exports = {
     },
     pwa: {
         iconPaths: {
-            favicon32: 'favicon.ico',
-            favicon16: 'favicon.ico',
-            appleTouchIcon: 'favicon.ico',
-            maskIcon: 'favicon.ico',
-            msTileImage: 'favicon.ico'
+            favicon32: `${projectname}.ico`,
+            favicon32: `${projectname}.ico`,
+            favicon16: `${projectname}.ico`,
+            appleTouchIcon: `${projectname}.ico`,
+            maskIcon: `${projectname}.ico`,
+            msTileImage: `${projectname}.ico`
         }
+      
     },
     pluginOptions: {}
 };

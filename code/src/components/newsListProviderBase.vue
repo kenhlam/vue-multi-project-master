@@ -9,11 +9,19 @@
 <script>
 import { _newsList } from "@api/service";
 export default {
+  provide() {
+    return {
+      getResData: () => {
+        return this.list;
+      },
+    };
+  },
   data() {
     return {
       list: [],
     };
   },
+  computed: {},
   props: {
     param: {
       type: Object,

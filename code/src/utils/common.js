@@ -5,6 +5,12 @@ import { _newsDetail } from "@api/service";
 
 const KAIYUNFunction = {};
 KAIYUNFunction.install = (Vue, options) => {
+  Vue.directive('v-img', {
+    bind(el, binding, vnode, oldVnode) {
+      // 逻辑...
+    }
+
+  })
   Object.assign(Vue.prototype, {
     setCookie(name, value) {
       var Days = 30;
@@ -12,16 +18,31 @@ KAIYUNFunction.install = (Vue, options) => {
       exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
       document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
     },
-    
+
     //读取cookies
     getCookie(name) {
-      var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
 
-      if (arr = document.cookie.match(reg))
+      var strCookies = document.cookie;
+      //截取变成cookie数组
+      var array = strCookies.split(';');
+      //循环每个cookie
+      for (var i = 0; i < array.length; i++) {
+        //将cookie截取成两部分
+        var item = array[i].split("=");
+        //判断cookie的name 是否相等
+        if (item[0].trim() == name) {
+          return item[1];
+        }
+      }
+      return null;
 
-        return unescape(arr[2]);
-      else
-        return null;
+      // var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+      // if (arr = document.cookie.match(reg))
+
+      //   return unescape(arr[2]);
+      // else
+      //   return null;
     },
 
     //删除cookies
@@ -41,7 +62,7 @@ KAIYUNFunction.install = (Vue, options) => {
         return /^1[3456789]\d{9}$/.test(str);
       }
     },
-    
+
     groupArr(arr, step) {
       let result = [];
 
@@ -72,7 +93,7 @@ KAIYUNFunction.install = (Vue, options) => {
       let d = date.getDate() > 9 ? date.getDate() : '0' + date.getDate()
       return y + '年' + m + '月' + d + '日 ' + "星期" + "日一二三四五六".charAt(new Date().getDay());
     },
-   
+
     async openPDF(id) {
       let res = await _newsDetail({ id: id });
 
@@ -84,7 +105,7 @@ KAIYUNFunction.install = (Vue, options) => {
       }
 
     }
-    
+
 
   })
 };

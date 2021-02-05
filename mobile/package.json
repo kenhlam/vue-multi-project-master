@@ -6,7 +6,8 @@
 
     "serve:demo1": "vue-cli-service serve --progress demo1",
     "build:demo1": "vue-cli-service build --progress demo1",
-    "build:test": "vue-cli-service build --progress wxzk",
+
+
     "debug": "node --inspect-brk ./node_modules/@vue/cli-service/bin/vue-cli-service.js serve --progress demo1"
   },
   "dependencies": {

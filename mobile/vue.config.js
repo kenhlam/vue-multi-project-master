@@ -5,7 +5,8 @@ const currentPage = project[projectname];
 
 let page = {};
 page[projectname] = currentPage.page;
-
+console.log(projectname)
+console.log(currentPage.page)
 module.exports = {
     publicPath: process.env.NODE_ENV === "production" ? currentPage.rootPath : "/",
     outputDir: "dist",
@@ -61,11 +62,11 @@ module.exports = {
     },
     pwa: {
         iconPaths: {
-            favicon32: 'favicon.ico',
-            favicon16: 'favicon.ico',
-            appleTouchIcon: 'favicon.ico',
-            maskIcon: 'favicon.ico',
-            msTileImage: 'favicon.ico'
+            favicon32: `${projectname}.ico`,
+            favicon16:  `${projectname}.ico`,
+            appleTouchIcon:  `${projectname}.ico`,
+            maskIcon:  `${projectname}.ico`,
+            msTileImage:  `${projectname}.ico`
         }
     },
     pluginOptions: {}

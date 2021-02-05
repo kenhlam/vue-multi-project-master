@@ -11,20 +11,26 @@ import { _newsList } from "@api/service";
 export default {
   data() {
     return {
-        list:[]
+      list: [],
     };
   },
   props: {
     param: {
-      default: Object,
+      type: Object,
       required: true,
+    },
+    initData: {
+      type: Boolean,
+      default: true,
     },
   },
   mounted() {
-      this.getList()
+    if (this.initData) {
+      this.getData();
+    }
   },
   methods: {
-    async getList() {
+    async getData() {
       let param = Object.assign(
         {
           pindex: 1,
@@ -35,9 +41,8 @@ export default {
       let res = await _newsList(param);
       if (res.success && res.result) {
         this.list = JSON.parse(res.result);
-      console.log(this.list);
       } else {
-        this.$message.error(res.msg);
+        console.warn("数据获取错误，请检查服务器接口！");
       }
     },
   },

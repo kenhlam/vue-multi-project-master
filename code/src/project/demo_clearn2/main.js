@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import "babel-polyfill";
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 import "@/assets/style/common.less"
 import "@/assets/style/reset.less"
@@ -54,21 +56,19 @@ import router from './router'
 import store from './store'
 
 Vue.prototype.$bus = new Vue();
+import BaiduMap from 'vue-baidu-map'
 
+Vue.use(BaiduMap, {
+ ak: 'AxbvktbqNSikEedqIeXBi6HSrqAK5Dn3'
+})
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI, {
   zIndex: 3000 // 全局z-index 初始值
 });
 
-import vLamPlugin from 'v-lam-plugin'
-Vue.use(vLamPlugin);
-
-
 Vue.prototype.$bus = new Vue();
 Vue.config.productionTip = false
-Vue.config.devtools = true;
+
 
 new Vue({
   router,

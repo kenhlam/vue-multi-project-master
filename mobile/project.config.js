@@ -12,7 +12,7 @@ module.exports = {
         proxy: {
             "/api": {
                 
-                target: "",//请求代理地址
+                target: "",
                 changeOrigin: true, // 是否改变域名
                 ws: true,
                 pathRewrite: {
@@ -20,7 +20,7 @@ module.exports = {
                 }
             },
             "/data": {
-                target: "",//请求代理地址
+                target: "",
                 changeOrigin: true, // 是否改变域名
                 ws: true
 
@@ -29,4 +29,5 @@ module.exports = {
 
         }
     }
+
 }

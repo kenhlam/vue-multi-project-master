@@ -9,10 +9,25 @@
 <script>
 import { _newsList } from "@api/service";
 export default {
+  provide(){
+    return {
+      res:this.res,
+      getResData:()=>{
+        return this.list
+      },
+     
+    }
+  },
   data() {
     return {
       list: [],
+      res:{
+        list:[]
+      }
     };
+  },
+  computed:{
+   
   },
   props: {
     param: {
@@ -41,6 +56,8 @@ export default {
       let res = await _newsList(param);
       if (res.success && res.result) {
         this.list = JSON.parse(res.result);
+        this.res.list = JSON.parse(res.result);
+       
       } else {
         console.warn("数据获取错误，请检查服务器接口！");
       }
