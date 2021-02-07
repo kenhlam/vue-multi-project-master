@@ -2,6 +2,8 @@
 
 ## 说明
 
+基于vue-cli3
+
 多入口多文件分项目打包  独立的项目配置project.config.js
 
 code 为PC端 vue+vue-router-element+axios+less
@@ -16,7 +18,7 @@ mobile为移动端vue+vue-router+vant+axios+less
 
 动态路由及路由模块化
 
-代理配置
+
 
 
 ## 项目配置
