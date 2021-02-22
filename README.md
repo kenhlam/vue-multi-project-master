@@ -1,4 +1,4 @@
-
+﻿
 
 ## 说明
 
@@ -10,7 +10,7 @@ mobile为移动端 vue+vant+axios+less
 
 ## 项目配置
 
-package.json配置开发和打包指令
+package.json配置开发和打包指 令
 
 "serve:demo1": "vue-cli-service serve --progress demo1",
 "build:demo1": "vue-cli-service build --progress demo1",
@@ -44,10 +44,7 @@ module.exports = {
                 target: "",
                 changeOrigin: true, // 是否改变域名
                 ws: true
-
             }
-
-
         }
     }
 
