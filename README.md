@@ -2,11 +2,24 @@
 
 ## 说明
 
+基于vue-cli3
+
 多入口多文件分项目打包  独立的项目配置project.config.js
 
-code 为PC端 vue+element+axios+less
+code 为PC端 vue+vue-router-element+axios+less
 
-mobile为移动端 vue+vant+axios+less
+mobile为移动端vue+vue-router+vant+axios+less
+
+## 语法特色
+
+动态路由注册
+
+动态组件注册
+
+动态路由及路由模块化
+
+vue:  provider inject slot数据通信模式
+
 
 ## 项目配置
 
