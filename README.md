@@ -4,7 +4,7 @@
 
 基于vue-cli3
 
-多入口多文件分项目打包  独立的项目配置project.config.js
+多   入口多文件分项目打包  独立的项目配置project.config.js
 
 code 为PC端 vue+vue-router-element+axios+less
 
